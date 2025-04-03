@@ -8,13 +8,28 @@ public class BallController : MonoBehaviour
     public float impulseForce = 10f;
     private bool ignoreNextCollision = false;
 
+    private Vector3 startPosition;
+
+    private void Start()
+    {
+        startPosition = transform.position; // Store the initial position of the ball
+    } // Store the initial position of the ball
+
     private void OnCollisionEnter(Collision collision)
     {
+   
+        // Increment score on collision
         if (ignoreNextCollision)
         {
         
             return; // Ignore this collision
         }
+           DeathPart deathPart = collision.transform.GetComponent<DeathPart>();
+           if (deathPart)
+           {
+            GameManager.singleton.RestartLevel(); // Restart the level if colliding with a death part
+           }
+
         rb.linearVelocity = Vector3.zero; // Reset velocity on collision
         rb.AddForce(Vector3.up * impulseForce, ForceMode.Impulse); // Apply impulse force
     
@@ -26,4 +41,9 @@ public class BallController : MonoBehaviour
     {
         ignoreNextCollision = false; // Allow the next collision
     }
-}
+    public void ResetBall()
+    {
+        transform.position = startPosition; // Reset the ball's position to the initial position
+      // Reset velocity
+    }
+    }
