@@ -5,15 +5,15 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public Rigidbody rb;
-    public float impulseForce = 10f;
-    private bool ignoreNextCollision = false;
+    public float impulseForce = 3f;
+    private bool ignoreNextCollision;
 
     private Vector3 startPosition;
 
     private void Start()
     {
-        startPosition = transform.position; // Store the initial position of the ball
-    } // Store the initial position of the ball
+        startPosition = transform.position; 
+    } 
 
     private void OnCollisionEnter(Collision collision)
     {

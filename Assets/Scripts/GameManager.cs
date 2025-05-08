@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartLevel()
     {
-    Debug.Log("Restart Level");
+    Debug.Log("Restart");
     singleton.currentScore = 0;
     FindAnyObjectByType<BallController>().ResetBall(); // Reset the ball's position
     }
