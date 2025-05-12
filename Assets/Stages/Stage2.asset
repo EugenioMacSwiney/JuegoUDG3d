@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284cc0a741c503748aa72f706c06b7dd, type: 3}
   m_Name: Stage2
   m_EditorClassIdentifier: 
-  stageBackgroundColor: {r: 0.5924529, g: 0.2121366, b: 0.16879319, a: 1}
-  stageLevelPartColor: {r: 0.7283019, g: 0.17451759, b: 0.17451759, a: 1}
+  stageBackgroundColor: {r: 0.9245283, g: 0.43086502, b: 0.43086502, a: 1}
+  stageLevelPartColor: {r: 0.073784195, g: 0.5758685, b: 0.90943396, a: 1}
   stageBallColor: {r: 0.12202916, g: 0.28695446, b: 0.7433963, a: 1}
   levels:
   - partCount: 2
